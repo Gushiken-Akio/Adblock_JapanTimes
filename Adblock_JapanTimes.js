@@ -10,14 +10,4 @@ while (elements2.length > 0)
 elements2[0].remove();
 }
 
-function KeyPress(e) {
-  var evtobj = window.event? event : e
-  if (evtobj.keyCode == 40) {
-    window.scrollBy(0, 100) 
-  }
-  if (evtobj.keyCode == 38) {
-    window.scrollBy(0, -100) 
-  }
-}
-
-document.onkeydown = KeyPress;
+document.head.innerHTML = document.head.innerHTML + '<style type="text/css">.tp-modal-open {overflow: scroll !important;}</style>'
